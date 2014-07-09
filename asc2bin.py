@@ -8,7 +8,7 @@ stdin = sys.stdin.read()
 data = re.sub(r'[^a-zA-Z0-9]','', stdin)
 
 try:
-	print data.decode("hex")
+	sys.stdout.write(data.decode("hex"))
 except TypeError:
 	print "[+] Error: Odd number of characters supplied"
 	exit()
